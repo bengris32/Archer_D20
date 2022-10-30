@@ -54,7 +54,9 @@ Type "run flash_nfs" to mount root filesystem over NFS
 Hit any key to stop autoboot:  0 
 AR10 # 
 ```
+## References
+[Full Bootlog](https://github.com/bengris32/Archer_D20/blob/master/logs/bootlog-stock.txt)
 
-## Useful References
+## OEM Support
 [Stock Firmware](https://static.tp-link.com/res/down/soft/Archer_D20_V1_150728.zip)  
 [GPL Code](https://static.tp-link.com/resources/gpl/ArcherD20v1_GPL.tar.gz)

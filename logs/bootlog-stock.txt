@@ -1,0 +1,997 @@
+
+ROM VER: 1.1.0
+CFG 05
+
+ROM VER: 1.1.0
+CFG 05
+
+DDR autotuning Rev 1.0
+DDR size from 0xa0000000 - 0xa3ffffff
+DDR check ok... start booting...
+
+
+
+U-Boot 2010.06-LANTIQ-v-2.2.67 (Jan 26 2016 - 10:15:11)
+
+CLOCK CPU 500M RAM 250M
+16 Bit RAM
+DRAM:  64 MiB
+Using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   internal phy using 25Mhz clock
+Internal phy firmware version: 0xc434
+ar10 Switch8192 KiB MX25L6405D at 0:0 is now current device
+
+
+Type "run flash_nfs" to mount root filesystem over NFS
+
+Hit any key to stop autoboot:  1  0 
+8192 KiB MX25L6405D at 0:0 is now current device
+	Uncompressing ... 
+Starting kernel ...
+
+Lantiq xDSL CPE AR10
+mips_hpt_frequency = 250000000, counter_resolution = 2
+Linux version 2.6.32.42 (root@localhost.localdomain) (gcc version 4.3.3 (GCC) ) #38 Tue Jan 26 10:25:23 HKT 2016
+phym = 04000000, mem = 03f00000, max_pfn = 00003f00
+Reserving memory for CP1 @0xa3f00000, size 0x00100000
+CPU revision is: 00019556 (MIPS 34Kc)
+Determined physical RAM map:
+AR10 mem final size = 65011712
+User-defined physical RAM map:
+ memory: 03e00000 @ 00000000 (usable)
+Initrd not found or empty - disabling initrd
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00003e00
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x00003e00
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 15748
+Kernel command line: root=/dev/mtdblock2 rw rootfstype=squashfs ip=192.168.1.1:192.168.1.100::::eth0:on console=ttyS0,115200 	 phym=64M mem=63M wlanm=62M panic=1 	mtdparts=ifx_sflash:128k(boot),1216k(kernel),6528k(rootfs),64k(radioDECT),64k(config),64k(romfile),64k(rom),64k(radio) 	-(res) 	init=/sbin/init ethwan=
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+Writing ErrCtl register=00000000
+Readback ErrCtl register=00000000
+Memory: 58584k/63488k available (2841k kernel code, 4828k reserved, 693k data, 184k init, 0k highmem)
+Hierarchical RCU implementation.
+NR_IRQS:185
+Lantiq ICU driver, version 3.0.1, (c) 2001-2011 Lantiq Deutschland GmbH
+console [ttyS0] enabled
+Calibrating delay loop... 332.59 BogoMIPS (lpj=1662976)
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+!!!!!!! WAVE400 system registeration on AHB 
+MTLK_MEM_BAR0_START is 3e00000
+MTLK_MEM_BAR0_END is 3efffff
+MTLK_MEM_BAR1_START is 1a000000
+MTLK_MEM_BAR1_END is 1a7fffff
+MTLK_WIRELESS_IRQ_IN_INDEX is 18
+Lantiq PCIe Root Complex driver, version 1.9.1, (c) 2001-2011 Lantiq Deutschland GmbH
+bio: create slab <bio-0> at 0
+ifx_pcie_rc_class_early_fixup port 0: fixed pcie host bridge to pci-pci bridge
+pci 0000:00:00.0: PME# supported from D0 D3hot
+pci 0000:00:00.0: PME# disabled
+pci 0000:01:00.0: PME# supported from D0 D3hot D3cold
+pci 0000:01:00.0: PME# disabled
+pci 0000:01:00.1: PME# supported from D0 D1 D3hot D3cold
+pci 0000:01:00.1: PME# disabled
+pci 0000:00:00.0: PCI bridge, secondary bus 0000:01
+pci 0000:00:00.0:   IO window: disabled
+pci 0000:00:00.0:   MEM window: 0x1c000000-0x1c1fffff
+pci 0000:00:00.0:   PREFETCH window: disabled
+NET: Registered protocol family 8
+NET: Registered protocol family 20
+Switching to clocksource MIPS
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+TCP reno registered
+NET: Registered protocol family 1
+gptu: totally 6 16-bit timers/counters
+gptu: misc_register on minor 63
+gptu: succeeded to request irq 118
+gptu: succeeded to request irq 119
+gptu: succeeded to request irq 120
+gptu: succeeded to request irq 121
+gptu: succeeded to request irq 122
+gptu: succeeded to request irq 123
+IFX DMA driver, version ifxmips_dma_core.c:v1.1.5 
+,(c)2009 Infineon Technologies AG
+Lantiq CGU driver, version 1.1.38, (c) 2001-2011 Lantiq Deutschland GmbH
+vpe1_mem = 0
+Wired TLB entries for Linux read_c0_wired() = 0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Registering mini_fo version $Id$
+fuse init (API version 7.13)
+msgmni has been set to 114
+DMA Referenced PAGE_SIZE = 4096
+Infineon Technologies DEU driver version 2.0.0 
+Lantiq Technologies DEU Driver version 2.0.0
+IFX DEU DES initialized (multiblock) (DMA).
+Lantiq Technologies DEU Driver version 2.0.0
+IFX DEU AES initialized (multiblock) (DMA).
+Infineon Technologies DEU driver version 2.0.0 
+IFX DEU ARC4 initialized (multiblock) (DMA).
+Infineon Technologies DEU driver version 2.0.0 
+IFX DEU SHA1 initialized (DMA).
+Infineon Technologies DEU driver version 2.0.0 
+IFX DEU MD5 initialized (DMA).
+Infineon Technologies DEU driver version 2.0.0 
+IFX DEU SHA1_HMAC initialized (DMA).
+Infineon Technologies DEU driver version 2.0.0 
+IFX DEU MD5_HMAC initialized (DMA).
+DEU driver initialization complete!
+io scheduler noop registered (default)
+ifx_pmu_init: Major 252
+Lantiq PMU driver, version 1.2.6, (c) 2001-2011 Lantiq Deutschland GmbH
+Lantiq GPIO driver, version 1.3.2, (c) 2001-2011 Lantiq Deutschland GmbH
+Infineon Technologies RCU driver version 1.1.1 
+Lantiq LED Controller driver, version 1.1.3, (c) 2001-2011 Lantiq Deutschland GmbH
+Lantiq MEI driver version: 5.07.02
+ttyS0 at MMIO 0xbe100c00 (irq = 105) is a IFX_ASC
+Register ASC (UART) to PMCU.
+Lantiq ASC (UART) driver, version 1.0.14, (c) 2001-2011 Lantiq Deutschland GmbH
+brd: module loaded
+loop: module loaded
+Lantiq SSC driver, version 2.4.2, (c) 2001-2011 Lantiq Deutschland GmbH
+Register flash device:flash0
+SPI Device: MX25P6405 0xC2 (MX) 0x20 0x17
+Parameters: num sectors = 128, sector size = 65536, write size = 256
+8 cmdlinepart partitions found on MTD device ifx_sflash
+Creating 8 MTD partitions on "ifx_sflash":
+0x000000000000-0x000000020000 : "boot"
+0x000000020000-0x000000150000 : "kernel"
+0x000000150000-0x0000007b0000 : "rootfs"
+mtd: partition "rootfs" set to be root filesystem
+0x0000007b0000-0x0000007c0000 : "radioDECT"
+0x0000007c0000-0x0000007d0000 : "config"
+0x0000007d0000-0x0000007e0000 : "romfile"
+0x0000007e0000-0x0000007f0000 : "rom"
+0x0000007f0000-0x000000800000 : "radio"
+Lantiq SPI flash driver, version 1.2.4, (c) 2001-2011 Lantiq Deutschland GmbH
+ifxmips_gpio: Pin ID 15 (port 0, pin 15) has been reserved by module SFLASH from kernel module!
+ifx_dataflash_init status error 255
+PPP generic driver version 2.4.2
+NET: Registered protocol family 24
+IFX SWITCH API, Version 1.2.5
+SWAPI: Registered character device [switch_api] with major no [81]
+Switch API: PCE MicroCode loaded !!
+Init IFX_ETHSW_Switch_API_procModule successfully.
+GPHY FW load for ARX300 !!
+Registered led device: USB_VBUS1
+Registered led device: COSIC_reset
+Registered led device: broadband_led
+Registered led device: internet_led
+Registered led device: ledc_8
+Registered led device: ledc_9
+Registered led device: ledc_10
+Registered led device: rst_to_default
+Registered led device: wps_button
+Registered led device: wlan0:green
+Registered led device: pcie1_led
+Registered led device: pcie2_led
+Registered led device: fxs2_led
+Registered led device: voip_led
+Registered led device: ledc_19
+Registered led device: dect_led
+Registered led device: wps:green
+Registered led device: error_led
+Lantiq LED driver, version 1.1.4, (c) 2001-2011 Lantiq Deutschland GmbH
+Mirror/redirect action on
+u32 classifier
+    Actions configured 
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (916 buckets, 10000 max)
+CONFIG_NF_CT_ACCT is deprecated and will be removed soon. Please use
+nf_conntrack.acct=1 kernel parameter, acct=1 nf_conntrack module option or
+sysctl net.netfilter.nf_conntrack_acct=1 to enable it.
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP cubic registered
+NET: Registered protocol family 10
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+IPv6 over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+Ebtables v2.0 registered
+NET: Registered protocol family 8
+atmpvc_init() failed with -17
+KOAM is loaded successfully.
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+VFS: Mounted root (squashfs filesystem) readonly on device 31:2.
+Freeing unused kernel memory: 184k freed
+starting pid 210, tty '': '/etc/init.d/rcS'
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+Initializing USB Mass Storage driver...
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+IFXUSB: ifxusb_hcd: version 3.2 B130116
+IFXUSB: USB core #0 soft-reset
+IFXUSB: USB core #0 soft-reset
+ifxusb_hcd ifxusb_hcd: IFX USB Controller
+ifxusb_hcd ifxusb_hcd: new USB bus registered, assigned bus number 1
+ifxusb_hcd ifxusb_hcd: irq 54, io mem 0xbe101000
+IFXUSB: Init: Power Port (0)
+usb usb1: configuration #1 chosen from 1 choice
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+IFXUSB: USB core #1 soft-reset
+IFXUSB: USB core #1 soft-reset
+ifxusb_hcd ifxusb_hcd: IFX USB Controller
+ifxusb_hcd ifxusb_hcd: new USB bus registered, assigned bus number 2
+ifxusb_hcd ifxusb_hcd: irq 83, io mem 0xbe106000
+IFXUSB: Init: Power Port (0)
+usb usb2: configuration #1 chosen from 1 choice
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+dns_init
+domain_name:tplinkmodem.net
+PPPoL2TP kernel driver, V1.0
+GPHY FIRMWARE LOAD SUCCESSFULLY AT ADDR (FE MODE) : 803d4000
+IFX GPHY driver FE Mode, version ifxmips_xrx_gphy: V1.1.1 - Firmware: c434
+[ dm_readFile ] 2042:  can not open xml file /var/tmp/pc/reduced_data_model.xml!, about to open file /etc/reduced_data_model.xml
+Loading D5 (MII0/1) driver ...... 
+CHIPID: 2, chipid address: 0xbf107344
+Succeeded!
+PPE datapath driver info:
+  Version ID: 128.3.3.1.0.0.3
+  Family    : AR10
+  DR Type   : Normal Data Path | Indirect-Fast Path
+  Interface : MII0 | MII1
+  Mode      : Routing
+  Release   : 0.0.3
+PPE firmware info:
+  Version ID: 8.5.2.11.1
+  Family    : AR10
+  FW Package: D5
+  Release   : 2.11.1
+PPE firmware feature:
+  Packet Acceleration             Support
+  IPv4                            Support
+  IPv6                            Support
+  6RD                             Support
+  DS-Lite                         Support
+IFXOS, Version 1.5.17 (c) Copyright 2009, Lantiq Deutschland GmbH
+
+
+Lantiq CPE API Driver version: DSL CPE API V4.14.16
+
+Predefined debug level: 3
+PPA API --- init successfully
+ifx_ppa_init - init succeeded
+wlan0     no private ioctls.
+
+wlan0.0   no private ioctls.
+
+wlan0.0   no private ioctls.
+
+ra0       no private ioctls.
+
+ra1       no private ioctls.
+
+sendto: No such file or directory
+pid 279 send 2001 error
+[ oal_sys_getOldTZInfo ] 513:  Open TZ file error!
+wlan0     no private ioctls.
+
+wlan0.0   no private ioctls.
+
+ra0       no private ioctls.
+
+ra1       no private ioctls.
+
+ioctl: No such device
+device eth0.3 entered promiscuous mode
+device eth0 entered promiscuous mode
+device eth0.4 entered promiscuous mode
+device eth0.5 entered promiscuous mode
+[4294680196] mtlk0(mtlk_cdev_init:355): Max nodex set to 1048575
+[4294681956] mtlk0(__mtlk_print_endianess:4915): The system is Big endian (0xbeadfeed, 0xedfeadbe)
+[4294681956] mtlk<3>(_ahb_irq_get:429): Found device IRQ: 18
+[4294681966] mtlk0(_mtlk_df_user_alloc_devname:8560): NDEV Name pattern: wlan%d
+Register WLAN SWITCH function
+Register wlan 2.4G WPS function
+[4294681976] mtlk0(mtlk_core_pdb_fast_handles_open:42): Open Hot-path parameters
+[4294681986] mtlk<4>(_mtlk_mmb_cleanup_reset_mac:3245): FW CPU reset is done
+[MTLKD] BBCPU Reg: offs=0x01c0 (ba2f01c0) val=0xfff003e0 (offset_mb=62)
+[MTLKD] Enabling interrupt (bf880208)
+[MTLKD] Interrupt enabled
+[MTLKD] ChipID: 0x07C0
+[MTLKD] e-fuse: num 1, address 0xbf107368, word: 0x00000000, value: 0x000
+[MTLKD] e-fuse: num 2, address 0xbf107368, word: 0x00000000, value: 0x000
+[MTLKD] e-fuse: num 3, address 0xbf107368, word: 0x00000000, value: 0x000
+[MTLKD] e-fuse: num 4, address 0xbf10736c, word: 0x00000000, value: 0x000
+[MTLKD] e-fuse: num 5, address 0xbf10736c, word: 0x00000000, value: 0x000
+mtlk mtlk.0: firmware: requesting cal_wlan0.bin
+arguments (firmware) env (DEBUG=yes
+ACTION=add
+OLDPWD=/
+HOME=/
+SEQNUM=207
+FIRMWARE=cal_wlan0.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+[4294682356] mtlk0(mtlk_mmb_drv_get_cpu_freq:604): FPI bus frequency: 250 MHz
+mtlk mtlk.0: firmware: requesting ap_upper_ar10.bin
+arguments (firmware) env (DEBUG=yes
+ACTION=remove
+OLDPWD=/
+HOME=/
+SEQNUM=208
+FIRMWARE=cal_wlan0.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+arguments (firmware) env (DEBUG=yes
+ACTION=add
+OLDPWD=/
+HOME=/
+SEQNUM=209
+FIRMWARE=ap_upper_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+invoke /etc/hotplug/firmware.agent ()
+[4294682946] mtlk0(get_firmware_version:1161): CID-0000: ap_upper_ar10.bin: @@@ VERSION INFO @@@ version number: 3.4.2.40.05_NoPsTxCancel_2_r4562 MIPS:  Single CPU(TMC AGG AP) interface: PCI  phy type: real phy on Apr  2 2015 at 15:04:17@@@ END @@@
+
+[4294683016] mtlk<4>(_mtlk_mmb_send_hw_dep_cfg:2443): AFE value: 0x34788791
+arguments (firmware) env (DEBUG=yes
+ACTION=remove
+OLDPWD=/
+HOME=/
+SEQNUM=210
+FIRMWARE=[4294683046] mtlk0(mtlk_eeprom_check_ee_data:1353): Options mask is 0x00
+[4294683046] mtlk0(load_default_hw_table:2119): HW configuration is 2X2
+ap_upper_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+[4294683076] mtlk0(_mtlk_df_user_ppa_register:540): PPA device function is registered (id=3)
+invoke /etc/hotplug/firmware.agent ()
+[4294683126] mtlk0(_mtlk_core_mbss_add_vap:7719): CID-0000: Got PRM_ID_VAP_ADD
+[4294683126] mtlk0(_mtlk_df_user_alloc_devname:8560): NDEV Name pattern: wlan0.0
+Register WLAN SWITCH function
+Register wlan 2.4G WPS function
+[4294683146] mtlk0(mtlk_core_pdb_fast_handles_open:42): Open Hot-path parameters
+[4294683156] mtlk0(_mtlk_core_mbss_add_vap:7737): CID-0000: VAP#1 added
+[4294683766] mtlk<4>(_mtlk_core_async_clb:479): Requested ability 0x1000085 is disabled or never was registered
+Interface doesn't accept private ioctl...
+sEthVlan (8BE0): Device or resource busy
+[4294683786] mtlk0(_mtlk_core_mbss_is_rescan_exempted:2755): Re-Scan cannot be exempted (AOCS type = 2)
+[4294683796] mtlk0(mtlk_mbss_init:3439): CID-0000: _mtlk_core_mbss_check_activation_params returned successfully
+[4294683806] mtlk0(_mtlk_mbss_preactivate:2917): CID-0000: Pre-activation configured parameters:
+[4294683806] mtlk0(mtlk_core_configuration_dump:4947): CID-0000: Country             : DE
+[4294683816] mtlk0(mtlk_core_configuration_dump:4948): CID-0000: Domain              : 48
+[4294683826] mtlk0(mtlk_core_configuration_dump:4949): CID-0000: Network mode        : 802.11bgn
+[4294683836] mtlk0(mtlk_core_configuration_dump:4950): CID-0000: Band                : 2.4
+[4294683846] mtlk0(mtlk_core_configuration_dump:4951): CID-0000: Prog Model Spectrum : 40 MHz
+[4294683846] mtlk0(mtlk_core_configuration_dump:4952): CID-0000: Selected Spectrum   : 40 MHz
+[4294683856] mtlk0(mtlk_core_configuration_dump:4953): CID-0000: User Sel. Spectrum  : 40 MHz
+[4294683866] mtlk0(mtlk_core_configuration_dump:4954): CID-0000: Bonding             : upper
+[4294683876] mtlk0(mtlk_core_configuration_dump:4955): CID-0000: HT mode             : enabled
+[4294683886] mtlk0(mtlk_core_configuration_dump:4957): CID-0000: SM enabled          : enabled
+[4294683896] mtlk0(mtlk_aocs_set_config_frequency_band:3161): Overriding AOCS type for 2.4 GHz (NONE)
+[4294683896] mtlk0(_mtlk_mbss_preactivate:2932): CID-0000: Start AOCS
+[4294683906] mtlk0(_mtlk_mbss_preactivate:2945): CID-0000: ap_scan_band_cfg = 1
+[4294683916] mtlk0(_mtlk_core_perform_initial_scan:2701): CID-0000: Scan started 40MHz
+[4294683926] mtlk0(do_scan:596): Starting normal scan...
+mtlk mtlk.0: firmware: requesting ProgModel_BG_CB_ar10.bin
+arguments (firmware) env (DEBUG=yes
+ACTION=add
+OLDPWD=/
+HOME=/
+SEQNUM=215
+FIRMWARE=ProgModel_BG_CB_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+mtlk mtlk.0: firmware: requesting ProgModel_BG_CB_40_RevI_ar10.bin
+arguments (firmware) env (DEBUG=yes
+ACTION=add
+OLDPWD=/
+HOME=/
+SEQNUM=217
+FIRMWARE=ProgModel_BG_CB_40_RevI_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+arguments (firmware) env (DEBUG=yes
+ACTION=remove
+OLDPWD=/
+HOME=/
+SEQNUM=216
+FIRMWARE=ProgModel_BG_CB_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+invoke /etc/hotplug/firmware.agent ()
+[4294684406] mtlk0(prepare_progmodel_string:2061): CID-0000: ProgModel: ProgModel_BG_CB_40_RevI_ar10.bin version 2025
+
+arguments (firmware) env (DEBUG=yes
+ACTION=remove
+OLDPWD=/
+HOME=/
+SEQNUM=218
+FIRMWARE=ProgModel_BG_CB_40_RevI_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+[4294686366] mtlk0(_mtlk_core_perform_initial_scan:2701): CID-0000: Scan started 20MHz
+[4294686366] mtlk0(do_scan:596): Starting normal scan...
+mtlk mtlk.0: firmware: requesting ProgModel_BG_nCB_ar10.bin
+arguments (firmware) env (DEBUG=yes
+ACTION=add
+OLDPWD=/
+HOME=/
+SEQNUM=219
+FIRMWARE=ProgModel_BG_nCB_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+mtlk mtlk.0: firmware: requesting ProgModel_BG_nCB_40_RevI_ar10.bin
+arguments (firmware) env (DEBUG=yes
+ACTION=remove
+OLDPWD=/
+HOME=/
+SEQNUM=220
+FIRMWARE=ProgModel_BG_nCB_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+arguments (firmware) env (DEBUG=yes
+ACTION=add
+OLDPWD=/
+HOME=/
+SEQNUM=221
+FIRMWARE=ProgModel_BG_nCB_40_RevI_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+[4294686786] mtlk0(prepare_progmodel_string:2061): CID-0000: ProgModel: ProgModel_BG_nCB_40_RevI_ar10.bin version 2025
+
+arguments (firmware) env (DEBUG=yes
+ACTION=remove
+OLDPWD=/
+HOME=/
+SEQNUM=222
+FIRMWARE=ProgModel_BG_nCB_40_RevI_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+[4294689746] mtlk<3>(_aocs_is_non_wifi_noise:3611): Force to 20 MHz mode due to interferer detection: RSSI:-22 thrsh:-60
+[4294689746] mtlk<4>(aocs_detect_non_wifi_noise:3637): Coexistance switching to 20MHz Mode
+[4294689756] mtlk0(_mtlk_core_aocs_on_spectrum_change:2885): CID-0000: Spectrum changed to 20MHz
+[4294689766] mtlk0(_mtlk_mbss_preactivate:3040): CID-0000: Pre-activation selected parameters:
+[4294689776] mtlk0(mtlk_core_configuration_dump:4947): CID-0000: Country             : DE
+[4294689786] mtlk0(mtlk_core_configuration_dump:4948): CID-0000: Domain              : 48
+[4294689796] mtlk0(mtlk_core_configuration_dump:4949): CID-0000: Network mode        : 802.11bgn
+[4294689796] mtlk0(mtlk_core_configuration_dump:4950): CID-0000: Band                : 2.4
+[4294689806] mtlk0(mtlk_core_configuration_dump:4951): CID-0000: Prog Model Spectrum : 20 MHz
+[4294689816] mtlk0(mtlk_core_configuration_dump:4952): CID-0000: Selected Spectrum   : 20 MHz
+[4294689826] mtlk0(mtlk_core_configuration_dump:4953): CID-0000: User Sel. Spectrum  : 40 MHz
+[4294689836] mtlk0(mtlk_core_configuration_dump:4954): CID-0000: Bonding             : upper
+[4294689836] mtlk0(mtlk_core_configuration_dump:4955): CID-0000: HT mode             : enabled
+[4294689846] mtlk0(mtlk_core_configuration_dump:4957): CID-0000: SM enabled          : enabled
+[4294689856] mtlk0(_mtlk_channels_frequency_element_dump:3086): CID-0000: Channel        : 7
+[4294689866] mtlk0(_mtlk_channels_frequency_element_dump:3087): CID-0000: ChannelACT     : 0
+[4294689876] mtlk0(_mtlk_channels_frequency_element_dump:3088): CID-0000: ScanType       : 0
+[4294689886] mtlk0(_mtlk_channels_frequency_element_dump:3089): CID-0000: ChannelSwCnt   : 0
+[4294689886] mtlk0(_mtlk_channels_frequency_element_dump:3090): CID-0000: SwitchMode     : 0
+[4294689896] mtlk0(_mtlk_channels_frequency_element_dump:3091): CID-0000: SmRequired     : 0
+[4294689906] mtlk0(_mtlk_channels_frequency_element_dump:3092): CID-0000: CbTxPowerLim   : 120
+[4294689916] mtlk0(_mtlk_channels_frequency_element_dump:3093): CID-0000: nCbTxPowerLim  : 120
+[4294689926] mtlk0(_mtlk_channels_frequency_element_dump:3094): CID-0000: AntennaGain    : 0
+[4294689936] mtlk0(_mtlk_channels_frequency_element_dump:3095): CID-0000: ChannelLoad    : 0
+[4294689936] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[0]    : 0
+[4294689946] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[0] : 0
+[4294689956] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[1]    : 0
+[4294689966] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[1] : 0
+[4294689976] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[2]    : 0
+[4294689976] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[2] : 0
+[4294689986] mtlk0(_mtlk_channels_frequency_element_dump:3100): CID-0000: SwitchType     : 0
+[4294689996] mtlk0(_mtlk_mbss_send_preactivate_req:2829): CID-0000: Sending UMI FW Preactivation
+[4294690076] mtlk<3>(mtlk_core_set_force_ncb:6621): CID-0000: Error returned for UMI_FORCE_NCB request to MAC (err=2)
+[4294690086] mtlk0(_mtlk_mbss_preactivate:3070): CID-0000: _mtlk_mbss_preactivate returned successfully
+[4294690096] mtlk0(mtlk_mbss_init:3446): CID-0000: _mtlk_mbss_preactivate_if_needed returned successfully
+[4294690106] mtlk0(mtlk_mbss_send_vap_activate:3134): CID-0000: Entering mtlk_mbss_send_vap_activate
+[4294690106] mtlk0(mtlk_mbss_send_vap_activate:3141): CID-0000: Start activation
+[4294690176] mtlk0(mtlk_mbss_send_vap_activate:3203): CID-0000: UMI_ACTIVATE_VAP
+[4294690186] mtlk0(mtlk_mbss_send_vap_activate:3205): CID-0000: 	sSSID = TP-LINK
+[4294690196] mtlk0(mtlk_mbss_send_vap_activate:3206): CID-0000: 	Hidden = 0
+[4294690206] mtlk0(__mtlk_dump:66): 	sRSNie = 
+cp= 0x833e8e10 l=80
+0000:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0010:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0020:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0030:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0040:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+[4294690236] mtlk0(mtlk_mbss_send_vap_activate:3210): CID-0000: mtlk_txmm_msg_send, MsgId = 0x453, ESSID = TP-LINK
+[4294690246] mtlk0(mtlk_mbss_init:3453): CID-0000: mtlk_mbss_send_vap_activate returned successfully
+[4294690256] mtlk<3>(_mtlk_pcoc_pmcu_request_state:365): PMCU mode request failed. New state is 1, error code is 1.
+killall: drvhlpr: no process killed
+killall: drvhlpr: no process killed
+Configuration file: /var/Wireless/wlan0.ap_bss
+[4294693476] mtlk0(_mtlk_core_mbss_is_rescan_exempted:2758): Re-Scan cannot be exempted (20/40 is active)
+[4294693476] mtlk0(mtlk_mbss_init:3439): CID-0000: _mtlk_core_mbss_check_activation_params returned successfully
+[4294693486] mtlk0(_mtlk_mbss_preactivate:2917): CID-0000: Pre-activation configured parameters:
+[4294693496] mtlk0(mtlk_core_configuration_dump:4947): CID-0000: Country             : DE
+[4294693506] mtlk0(mtlk_core_configuration_dump:4948): CID-0000: Domain              : 48
+[4294693516] mtlk0(mtlk_core_configuration_dump:4949): CID-0000: Network mode        : 802.11bgn
+[4294693526] mtlk0(mtlk_core_configuration_dump:4950): CID-0000: Band                : 2.4
+[4294693536] mtlk0(mtlk_core_configuration_dump:4951): CID-0000: Prog Model Spectrum : 20 MHz
+[4294693536] mtlk0(mtlk_core_configuration_dump:4952): CID-0000: Selected Spectrum   : 40 MHz
+[4294693546] mtlk0(mtlk_core_configuration_dump:4953): CID-0000: User Sel. Spectrum  : 40 MHz
+[4294693556] mtlk0(mtlk_core_configuration_dump:4954): CID-0000: Bonding             : upper
+[4294693566] mtlk0(mtlk_core_configuration_dump:4955): CID-0000: HT mode             : enabled
+[4294693576] mtlk0(mtlk_core_configuration_dump:4957): CID-0000: SM enabled          : enabled
+[4294693576] mtlk0(mtlk_aocs_set_config_frequency_band:3161): Overriding AOCS type for 2.4 GHz (NONE)
+[4294693586] mtlk0(_mtlk_mbss_preactivate:2932): CID-0000: Start AOCS
+[4294693596] mtlk0(_mtlk_mbss_preactivate:2945): CID-0000: ap_scan_band_cfg = 1
+[4294693606] mtlk0(_mtlk_core_perform_initial_scan:2701): CID-0000: Scan started 40MHz
+[4294693606] mtlk0(do_scan:596): Starting normal scan...
+mtlk mtlk.0: firmware: requesting ProgModel_BG_CB_ar10.bin
+arguments (firmware) env (DEBUG=yes
+ACTION=add
+OLDPWD=/
+HOME=/
+SEQNUM=223
+FIRMWARE=ProgModel_BG_CB_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+mtlk mtlk.0: firmware: requesting ProgModel_BG_CB_40_RevI_ar10.bin
+arguments (firmware) env (DEBUG=yes
+ACTION=remove
+OLDPWD=/
+HOME=/
+SEQNUM=224
+FIRMWARE=ProgModel_BG_CB_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+arguments (firmware) env (DEBUG=yes
+ACTION=add
+OLDPWD=/
+HOME=/
+SEQNUM=225
+FIRMWARE=ProgModel_BG_CB_40_RevI_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+[4294694026] mtlk0(prepare_progmodel_string:2061): CID-0000: ProgModel: ProgModel_BG_CB_40_RevI_ar10.bin version 2025
+
+arguments (firmware) env (DEBUG=yes
+ACTION=remove
+OLDPWD=/
+HOME=/
+SEQNUM=226
+FIRMWARE=ProgModel_BG_CB_40_RevI_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+[4294695266] mtlk0(_mtlk_core_perform_initial_scan:2701): CID-0000: Scan started 20MHz
+[4294695266] mtlk0(do_scan:596): Starting normal scan...
+mtlk mtlk.0: firmware: requesting ProgModel_BG_nCB_ar10.bin
+arguments (firmware) env (DEBUG=yes
+ACTION=add
+OLDPWD=/
+HOME=/
+SEQNUM=227
+FIRMWARE=ProgModel_BG_nCB_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+mtlk mtlk.0: firmware: requesting ProgModel_BG_nCB_40_RevI_ar10.bin
+arguments (firmware) env (DEBUG=yes
+ACTION=remove
+OLDPWD=/
+HOME=/
+SEQNUM=228
+FIRMWARE=ProgModel_BG_nCB_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+arguments (firmware) env (DEBUG=yes
+ACTION=add
+OLDPWD=/
+HOME=/
+SEQNUM=229
+FIRMWARE=ProgModel_BG_nCB_40_RevI_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+invoke /etc/hotplug/firmware.agent ()
+[4294695686] mtlk0(prepare_progmodel_string:2061): CID-0000: ProgModel: ProgModel_BG_nCB_40_RevI_ar10.bin version 2025
+
+arguments (firmware) env (DEBUG=yes
+ACTION=remove
+OLDPWD=/
+HOME=/
+SEQNUM=230
+FIRMWARE=ProgModel_BG_nCB_40_RevI_ar10.bin
+DEVPATH=/devices/platform/mtlk.0/firmware/mtlk.0
+SUBSYSTEM=firmware
+PATH=/bin:/sbin:/usr/sbin:/usr/bin
+TIMEOUT=60
+PWD=/etc/hotplug)
+invoke /etc/hotplug/firmware.agent ()
+[4294697576] mtlk<3>(_aocs_is_non_wifi_noise:3593): Force to 20 MHz mode due to interferer detection: ch:1 load:29 thrsh:15
+[4294697586] mtlk<4>(aocs_detect_non_wifi_noise:3637): Coexistance switching to 20MHz Mode
+[4294697596] mtlk0(_mtlk_core_aocs_on_spectrum_change:2885): CID-0000: Spectrum changed to 20MHz
+[4294697596] mtlk0(_mtlk_mbss_preactivate:3040): CID-0000: Pre-activation selected parameters:
+[4294697606] mtlk0(mtlk_core_configuration_dump:4947): CID-0000: Country             : DE
+[4294697616] mtlk0(mtlk_core_configuration_dump:4948): CID-0000: Domain              : 48
+[4294697626] mtlk0(mtlk_core_configuration_dump:4949): CID-0000: Network mode        : 802.11bgn
+[4294697636] mtlk0(mtlk_core_configuration_dump:4950): CID-0000: Band                : 2.4
+[4294697646] mtlk0(mtlk_core_configuration_dump:4951): CID-0000: Prog Model Spectrum : 20 MHz
+[4294697646] mtlk0(mtlk_core_configuration_dump:4952): CID-0000: Selected Spectrum   : 20 MHz
+[4294697656] mtlk0(mtlk_core_configuration_dump:4953): CID-0000: User Sel. Spectrum  : 40 MHz
+[4294697666] mtlk0(mtlk_core_configuration_dump:4954): CID-0000: Bonding             : upper
+[4294697676] mtlk0(mtlk_core_configuration_dump:4955): CID-0000: HT mode             : enabled
+[4294697686] mtlk0(mtlk_core_configuration_dump:4957): CID-0000: SM enabled          : enabled
+[4294697696] mtlk0(_mtlk_channels_frequency_element_dump:3086): CID-0000: Channel        : 6
+[4294697696] mtlk0(_mtlk_channels_frequency_element_dump:3087): CID-0000: ChannelACT     : 0
+[4294697706] mtlk0(_mtlk_channels_frequency_element_dump:3088): CID-0000: ScanType       : 0
+[4294697716] mtlk0(_mtlk_channels_frequency_element_dump:3089): CID-0000: ChannelSwCnt   : 0
+[4294697726] mtlk0(_mtlk_channels_frequency_element_dump:3090): CID-0000: SwitchMode     : 0
+[4294697736] mtlk0(_mtlk_channels_frequency_element_dump:3091): CID-0000: SmRequired     : 0
+[4294697736] mtlk0(_mtlk_channels_frequency_element_dump:3092): CID-0000: CbTxPowerLim   : 120
+[4294697746] mtlk0(_mtlk_channels_frequency_element_dump:3093): CID-0000: nCbTxPowerLim  : 120
+[4294697756] mtlk0(_mtlk_channels_frequency_element_dump:3094): CID-0000: AntennaGain    : 0
+[4294697766] mtlk0(_mtlk_channels_frequency_element_dump:3095): CID-0000: ChannelLoad    : 0
+[4294697776] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[0]    : 0
+[4294697776] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[0] : 0
+[4294697786] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[1]    : 0
+[4294697796] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[1] : 0
+[4294697806] mtlk0(_mtlk_channels_frequency_element_dump:3097): CID-0000: MaxTxPwr[2]    : 0
+[4294697816] mtlk0(_mtlk_channels_frequency_element_dump:3098): CID-0000: MaxTxPwrIdx[2] : 0
+[4294697826] mtlk0(_mtlk_channels_frequency_element_dump:3100): CID-0000: SwitchType     : 0
+[4294697826] mtlk0(_mtlk_mbss_send_preactivate_req:2829): CID-0000: Sending UMI FW Preactivation
+[4294697906] mtlk<3>(mtlk_core_set_force_ncb:6621): CID-0000: Error returned for UMI_FORCE_NCB request to MAC (err=2)
+[4294697916] mtlk0(_mtlk_mbss_preactivate:3070): CID-0000: _mtlk_mbss_preactivate returned successfully
+[4294697926] mtlk0(mtlk_mbss_init:3446): CID-0000: _mtlk_mbss_preactivate_if_needed returned successfully
+[4294697936] mtlk0(mtlk_mbss_send_vap_activate:3134): CID-0000: Entering mtlk_mbss_send_vap_activate
+[4294697946] mtlk0(mtlk_mbss_send_vap_activate:3141): CID-0000: Start activation
+[4294698006] mtlk0(mtlk_mbss_send_vap_activate:3203): CID-0000: UMI_ACTIVATE_VAP
+[4294698026] mtlk0(mtlk_mbss_send_vap_activate:3205): CID-0000: 	sSSID = TP-LINK
+[4294698036] mtlk0(mtlk_mbss_send_vap_activate:3206): CID-0000: 	Hidden = 0
+[4294698036] mtlk0(__mtlk_dump:66): 	sRSNie = 
+cp= 0x833ec470 l=80
+0000:  30 14 01 00 00 0f ac 04  01 00 00 0f ac 04 01 00 
+0010:  00 0f ac 02 00 00 00 00  00 00 00 00 00 00 00 00 
+0020:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0030:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+0040:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 
+[4294698066] mtlk0(mtlk_mbss_send_vap_activate:3210): CID-0000: mtlk_txmm_msg_send, MsgId = 0x453, ESSID = TP-LINK
+[4294698076] mtlk0(mtlk_mbss_init:3453): CID-0000: mtlk_mbss_send_vap_activate returned successfully
+[4294698086] mtlk<3>(_mtlk_pcoc_pmcu_request_state:365): PMCU mode request failed. New state is 1, error code is 1.
+device wlan0 entered promiscuous mode
+brctl: iface lq0: No such device
+device wlan0.0 entered promiscuous mode
+PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+
+
+=== pAd = c0dda000, size = 1337296 ===
+
+<-- RTMPAllocTxRxRingMemory, Status=0
+<-- RTMPAllocAdapterBlock, Status=0
+device_id =0x7650
+MACVersion = 0x76502000
+load fw spent 20ms
+RX DESC a2672000 size = 4096
+RX1 DESC a2673000 size = 4096
+cfg_mode=14
+cfg_mode=14
+1. Phy Mode = 49
+2. Phy Mode = 49
+ext_pa_current_setting = 1
+MT76x0_TssiTableAdjust: upper_bound = 0x7F decimal: 127
+MT76x0_TssiTableAdjust: lower_bound = 0xFFFFFF80 decimal: -128
+*** MT76x0_TssiTableAdjust: A Tssi[-7 .. +7] = -128 -128 -128 -8 -14 4 -3 * 0 * 16 10 127 127 127 127 -128, offset=-6, tuning=1
+MT76x0_TssiTableAdjust: A Tssi[-7 .. +7] = -128 -128 -128 -14 -20 -2 -9 * -6 * 10 4 121 121 121 121 122, offset=-6, tuning=1
+mp_temperature=0xffffffff, step = +0
+MT76x0_TssiTableAdjust: upper_bound = 0x7F decimal: 127
+MT76x0_TssiTableAdjust: lower_bound = 0xFFFFFF80 decimal: -128
+*** MT76x0_TssiTableAdjust: A Tssi[-7 .. +7] = -128 -128 -128 -9 -15 5 -4 * -6 * 17 11 127 127 127 127 -6, offset=-6, tuning=1
+MT76x0_TssiTableAdjust: A Tssi[-7 .. +7] = -128 -128 -128 -15 -21 -1 -10 * -6 * 11 5 121 121 121 121 -12, offset=-6, tuning=1
+mp_temperature=0xffffffff, step = +0
+3. Phy Mode = 49
+bAutoTxAgcG = 1
+MCS Set = ff 00 00 00 01
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+@@@ ed_monitor_init : ===>
+@@@ ed_monitor_init : <===
+<==== rt28xx_init, Status=0
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+@@@ ed_monitor_exit : ===>
+@@@ ed_monitor_exit : <===
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+==== 2C70 [0] ,RXBackup [0]
+ RX Cal =0 , use RXBackup [0] to restore!!
+ result [0]!!
+@@@ ed_monitor_init : ===>
+@@@ ed_monitor_init : <===
+Register wlan 5G WPS function
+device ra0 entered promiscuous mode
+device apcli0 entered promiscuous mode
+device ra1 entered promiscuous mode
+WLAN-Start wlNetlinkTool
+Waiting for Wireless Events from interfaces...
+sendto: No such file or directory
+pid 279 send 2030 error
+sendto: No such file or directory
+pid 279 send 2004 error
+iptables: Bad rule (does a matching rule exist in that chain?).
+radvd starting
+brctl: bridge br0: Invalid argument
+[ getPidFromPidFile ] 112:  Cann't open file: /var/run/zebra.pid.
+[ getPidFromPidFile ] 112:  Cann't open file: /var/run/ripd.pid.
+[4294708886] mtlk0(_mtlk_df_user_ppa_unregister:565): PPA device function is unregistered (id=3)
+ifx_ppa_init - init succeeded
+[4294709286] mtlk0(_mtlk_df_user_ppa_register:540): PPA device function is registered (id=3)
+[4294709306] mtlk0(_mtlk_df_user_ppa_register:540): PPA device function is registered (id=4)
+[4294709636] mtlk0(_mtlk_df_user_ppa_unregister:565): PPA device function is unregistered (id=4)
+iptables: Bad rule (does a matching rule exist in that chain?).
+[4294710106] mtlk0(_mtlk_df_user_ppa_unregister:565): PPA device function is unregistered (id=3)
+ifx_ppa_init - init succeeded
+[4294710506] mtlk0(_mtlk_df_user_ppa_register:540): PPA device function is registered (id=3)
+[4294710536] mtlk0(_mtlk_df_user_ppa_register:540): PPA device function is registered (id=4)
+[4294710856] mtlk0(_mtlk_df_user_ppa_unregister:565): PPA device function is unregistered (id=4)
+iptables: Bad rule (does a matching rule exist in that chain?).
+[4294711296] mtlk0(_mtlk_df_user_ppa_unregister:565): PPA device function is unregistered (id=3)
+ifx_ppa_init - init succeeded
+[4294711686] mtlk0(_mtlk_df_user_ppa_register:540): PPA device function is registered (id=3)
+[4294711716] mtlk0(_mtlk_df_user_ppa_register:540): PPA device function is registered (id=4)
+[4294712036] mtlk0(_mtlk_df_user_ppa_unregister:565): PPA device function is unregistered (id=4)
+iptables: Bad rule (does a matching rule exist in that chain?).
+ip6tables: Bad rule (does a matching rule exist in that chain?).
+[ rsl_setStorageServiceObj ] 1394:  mountFlag is 3,We start usb server
+
+killall: ushare: no process killed
+uShare (version 1.1a), a lightweight UPnP A/V and DLNA Media Server.
+Benjamin Zores (C) 2005-2007, for GeeXboX Team.
+See http://ushare.geexbox.org/ for updates.
+iptables: Bad rule (does a matching rule exist in that chain?).
+iptables: Bad rule (does a matching rule exist in that chain?).
+ip6tables: Bad rule (does a matching rule exist in that chain?).
+kcg 333 :GPL NetUSB up!
+NetUSB: module license 'Proprietary' taints kernel.
+Disabling lock debugging due to kernel taint
+kc   90 : run_telnetDBGDServer start 
+kc  227 : init_DebugD end
+INFO186B: NetUSB 1.02.61, 00020620 : Dec  4 2014 14:32:16
+INFO186D: 7437: Archer D20 :Archer D20 
+INFO186E:  AUTH ISOC
+INFO186F:  MOVE_HEAD filterAudio
+usbcore: registered new interface driver KC NetUSB General Driver
+INFO18C7: Reset device when disconnect
+INFO0145:  init proc : PAGE_SIZE 4096
+INFO1740:  infomap 8164b178 
+INFO1743:  sleep to wait br0 to wake up
+INFO02CE:  use dev Name br0 
+INFO174C:  sleep to wait br0 end.
+INFO1765:  UDP_BROAD 7437 tcpPort:625868800 
+INFO02CE:  use dev Name br0 
+INFO161F: tcpConnector() started...
+Enable forwarding
+Will output 1024 bit rsa secret key to '/var/tmp/dropbear/dropbear_rsa_host_key'
+Generating key, this may take a while...
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgk/YNwZ329ExTTTFpbR3AfCn9WH3TSNahYsGH5+UJgOc2tj9WrjtrDPX2R6nEVGv/iSzAZgeYETlKBsjGdjn6oxAJ5cZ4ovyI8lwpi6BpoHur1F7owusDQJTHuha62G2GgGxz3V1S3JoEtSM5fF3zLfGBM77+c6TIxmZo/0C6gcVHZ8= admin@Archer D20
+Fingerprint: md5 03:7f:28:1c:8e:24:ab:19:20:29:60:72:07:6f:67:e2
+Will output 1024 bit dss secret key to '/var/tmp/dropbear/dropbear_dss_host_key'
+Generating key, this may take a while...
+Public key portion is:
+ssh-dss AAAAB3NzaC1kc3MAAACBANCYgT6Ne0X7FZTEAvHoyRXTZvQ6hENbLFgHk0McTfwhspY/UEirL7sxeud4axIRFRKTf6XV279Cj3KQo4SxrxTPH7kJH428fXVxsHHB9aS/zMgI1OT9OxLt4mvdS9Yx6Zm+TKH3F80eFe/h/0DSKXBGH/1Da0F/xBJuTbDesY1tAAAAFQDwEOUtFBkqk9X8mB3cI3kvBRpBrwAAAIEAzlf3qtINcK9d59hzlVPi2eaWp4nw0xlgYN9ijWQt75TwLjzW36n7CfpQXWYBHy6iTzsnOEJ6Jfw6BQkluF0cuxD2d+VQ17gVMujlH64D2yKrBlH4V5c3AWe8XXSrwf6LAahtPAEx5afEuTOkJe/zSquAjqAlAZkaOoTo/FoZGWcAAACASPMrV8IhkQDpxoj3V6TydoItkbTuNE084+si/+AdR6ddFcwymS2bM2iZF+TScK1fhGkfs5EChiuTwwWM71783ZfN3+MkDgM2SaWpFtSxW3SOjNstt2pBs324WEcjpR6CN5Z8DOsn03LQhFRzv/8WW6eNpVORYwvFEORZ0Ajgobg= admin@Archer D20
+Fingerprint: md5 0c:b6:b2:f2:87:cc:9b:4e:d4:6a:2f:74:74:8b:57:fd
+INFO14F8: Bind to br0
+Found 0 files and subdirectories.
+writing 0x00080202 into address 0x1f102048
+
+Please press Enter to activate this console. 
