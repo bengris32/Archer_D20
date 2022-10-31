@@ -1,0 +1,263 @@
+ROM VER: 1.1.0
+CFG 05
+
+ROM VER: 1.1.0
+CFG 05
+
+DDR autotuning Rev 1.0
+DDR size from 0xa0000000 - 0xa3ffffff
+DDR check ok... start booting...
+
+
+
+U-Boot 2010.06-LANTIQ-v-2.2.67 (Jan 26 2016 - 10:15:11)
+
+CLOCK CPU 500M RAM 250M
+16 Bit RAM
+DRAM:  64 MiB
+Using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   internal phy using 25Mhz clock
+Internal phy firmware version: 0xc434
+ar10 Switch8192 KiB MX25L6405D at 0:0 is now current device
+
+
+Type "run flash_nfs" to mount root filesystem over NFS
+
+Hit any key to stop autoboot:  1  0 
+AR10 # tftpboot openwrt-lantiq-xrx200-tplink_archer-d20-initramfs-kernel.bin
+8192 KiB MX25L6405D at 0:0 is now current device
+Using ar10 Switch device
+TFTP from server 192.168.1.100; our IP address is 192.168.1.1
+Filename 'openwrt-lantiq-xrx200-tplink_archer-d20-initramfs-kernel.bin'.
+Load address: 0x80800000
+Loading: #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ##########
+done
+Bytes transferred = 6816620 (68036c hex)
+AR10 # bootm
+	Uncompressing ... 
+Starting kernel ...
+
+[    0.000000] Linux version 5.10.152 (ben@ben-desktop) (mips-openwrt-linux-musl-gcc (OpenWrt GCC 11.3.0 r21149+5-b99d377886) 11.3.0, GNU ld (GNU Binutils) 2.37) #0 SMP Mon Oct 31 14:50:46 2022
+[    0.000000] SoC: xRX300 rev 1.2
+[    0.000000] printk: bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019556 (MIPS 34Kc)
+[    0.000000] MIPS: machine is TP-Link Archer D20 v1
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Detected 1 available secondary CPU(s)
+[    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x0000000003ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000003ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000003ffffff]
+[    0.000000] percpu: Embedded 14 pages/cpu s26576 r8192 d22576 u57344
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 16240
+[    0.000000] Kernel command line: 
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes, linear)
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 50328K/65536K available (6611K kernel code, 626K rwdata, 1752K rodata, 5200K init, 210K bss, 15208K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] NR_IRQS: 256
+[    0.000000] CPU Clock: 500MHz
+[    0.000000] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041786 ns
+[    0.000012] sched_clock: 32 bits at 250MHz, resolution 4ns, wraps every 8589934590ns
+[    0.007986] Calibrating delay loop... 331.77 BogoMIPS (lpj=1658880)
+[    0.074065] pid_max: default: 32768 minimum: 301
+[    0.078990] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.086185] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.098440] rcu: Hierarchical SRCU implementation.
+[    0.103693] dyndbg: Ignore empty _ddebug table in a CONFIG_DYNAMIC_DEBUG_CORE build
+[    0.111832] smp: Bringing up secondary CPUs ...
+[    0.117739] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.117754] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.117892] CPU1 revision is: 00019556 (MIPS 34Kc)
+[    0.171391] Synchronize counters for CPU 1: done.
+[    0.195674] smp: Brought up 1 node, 2 CPUs
+[    0.204573] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.214346] futex hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.221342] pinctrl core: initialized pinctrl subsystem
+[    0.228627] NET: Registered protocol family 16
+[    0.270007] pinctrl-xway 1e100b10.pinmux: Init done
+[    0.277874] dma-xway 1e104100.dma: Init done - hw rev: 8, ports: 5, channels: 24
+[    0.285837] pcie-xrx200 1d900000.pcie: failed to get the PCIe PHY
+[    0.361491] gpio-stp-xway 1e100bb0.stp: Init done
+[    0.367944] usbcore: registered new interface driver usbfs
+[    0.373541] usbcore: registered new interface driver hub
+[    0.379011] usbcore: registered new device driver usb
+[    0.393806] clocksource: Switched to clocksource MIPS
+[    0.401551] NET: Registered protocol family 2
+[    0.406323] IP idents hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.415072] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+[    0.423448] TCP established hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.431202] TCP bind hash table entries: 1024 (order: 1, 8192 bytes, linear)
+[    0.438231] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.444929] UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.451438] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.459133] NET: Registered protocol family 1
+[    0.463413] PCI: CLS 0 bytes, default 32
+[    9.157053] gptu: totally 6 16-bit timers/counters
+[    9.161867] gptu: misc_register on minor 63
+[    9.166221] gptu: succeeded to request irq 126
+[    9.170555] gptu: succeeded to request irq 127
+[    9.175144] gptu: succeeded to request irq 128
+[    9.179590] gptu: succeeded to request irq 129
+[    9.184156] gptu: succeeded to request irq 130
+[    9.188601] gptu: succeeded to request irq 131
+[    9.193285] No VPEs reserved for AP/SP, not initialize VPE loader
+[    9.193285] Pass maxvpes=<n> argument as kernel argument
+[    9.204670] No TCs reserved for AP/SP, not initializing RTLX.
+[    9.204670] Pass maxtcs=<n> argument as kernel argument
+[    9.219638] workingset: timestamp_bits=14 max_order=14 bucket_order=0
+[    9.232781] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    9.238526] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    9.254482] 1e100c00.serial: ttyLTQ0 at MMIO 0x1e100c00 (irq = 112, base_baud = 0) is a lantiq,asc
+[    9.263417] printk: console [ttyLTQ0] enabled
+[    9.263417] printk: console [ttyLTQ0] enabled
+[    9.272170] printk: bootconsole [early0] disabled
+[    9.272170] printk: bootconsole [early0] disabled
+[    9.290378] spi-lantiq-ssc 1e100800.spi: Lantiq SSC SPI controller (Rev 9, TXFS 8, RXFS 8, DMA 1)
+[    9.300387] spi-nor spi0.1: mx25l6405d (8192 Kbytes)
+[    9.304156] 7 fixed-partitions partitions found on MTD device spi0.1
+[    9.310786] Creating 7 MTD partitions on "spi0.1":
+[    9.315191] 0x000000000000-0x000000020000 : "u-boot"
+[    9.321534] 0x000000020000-0x0000007d0000 : "firmware"
+[    9.328120] 2 tplink-fw partitions found on MTD device firmware
+[    9.332640] Creating 2 MTD partitions on "firmware":
+[    9.337667] 0x000000000000-0x00000012de30 : "kernel"
+[    9.342563] mtd: partition "kernel" doesn't end on an erase/write block -- force read-only
+[    9.352287] 0x000000130000-0x0000007b0000 : "rootfs"
+[    9.357804] mtd: device 3 (rootfs) set to be root filesystem
+[    9.362758] 1 squashfs-split partitions found on MTD device rootfs
+[    9.368350] 0x000000770000-0x0000007b0000 : "rootfs_data"
+[    9.375285] 0x0000007b0000-0x0000007c0000 : "radioDECT"
+[    9.380634] 0x0000007c0000-0x0000007d0000 : "config"
+[    9.385941] 0x0000007d0000-0x0000007e0000 : "romfile"
+[    9.393952] 0x0000007e0000-0x0000007f0000 : "rom"
+[    9.398665] 0x0000007f0000-0x000000800000 : "radio"
+[    9.892313] gswip 1e108000.switch: dsa switch register failed: -517
+[    9.907382] NET: Registered protocol family 10
+[    9.917474] Segment Routing with IPv6
+[    9.919951] NET: Registered protocol family 17
+[    9.924936] 8021q: 802.1Q VLAN Support v1.8
+[    9.934662] pcie-xrx200 1d900000.pcie: failed to get the PCIe PHY
+[   10.446216] gswip 1e108000.switch lan1 (uninitialized): PHY [1e108000.switch-mii:01] driver [Intel XWAY PHY11G (xRX v1.2 integrated)] (irq=POLL)
+[   10.462641] gswip 1e108000.switch lan3 (uninitialized): PHY [1e108000.switch-mii:02] driver [Intel XWAY PHY11G (xRX v1.2 integrated)] (irq=POLL)
+[   10.479460] gswip 1e108000.switch lan2 (uninitialized): PHY [1e108000.switch-mii:04] driver [Intel XWAY PHY11G (xRX v1.2 integrated)] (irq=POLL)
+[   10.494035] gswip 1e108000.switch lan4 (uninitialized): PHY [1e108000.switch-mii:05] driver [Generic PHY] (irq=POLL)
+[   10.505879] DSA: tree 0 setup
+[   10.507455] gswip 1e108000.switch: probed GSWIP version 21 mod 0
+[   10.649077] PCI host bridge /fpi@10000000/pcie@d900000 ranges:
+[   10.653828] PCI host bridge to bus 0000:00
+[   10.657622] pci_bus 0000:00: root bus resource [mem 0x1c000000-0x1cffffff]
+[   10.664504] pci_bus 0000:00: root bus resource [io  0x1d800000-0x1d8fffff]
+[   10.671310] pci_bus 0000:00: root bus resource [??? 0x00000000 flags 0x0]
+[   10.678158] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[   10.686138] ifx_pcie_rc_class_early_fixup: fixed pcie host bridge to pci-pci bridge
+[   10.703708] pci 0000:00:00.0: ifx_pcie_rc_class_early_fixup+0x0/0x7c took 17132 usecs
+[   10.710149] pci 0000:00:00.0: [1bef:0011] type 01 class 0x060400
+[   10.716315] pci 0000:00:00.0: PME# supported from D0 D3hot
+[   10.724396] pci 0000:01:00.0: [14c3:7650] type 00 class 0x028000
+[   10.729072] pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x000fffff]
+[   10.735500] pci 0000:01:00.0: PME# supported from D0 D3hot D3cold
+[   10.741904] pci 0000:01:00.1: [14c3:8650] type 00 class 0x0d1100
+[   10.747457] pci 0000:01:00.1: reg 0x10: [mem 0x00000000-0x000fffff]
+[   10.753933] pci 0000:01:00.1: supports D1
+[   10.757602] pci 0000:01:00.1: PME# supported from D0 D1 D3hot D3cold
+[   10.766149] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[   10.771334] pci_bus 0000:00: busn_res: [bus 00-ff] end is updated to 01
+[   10.778034] pci 0000:00:00.0: BAR 8: assigned [mem 0x1c000000-0x1c1fffff]
+[   10.784811] pci 0000:01:00.0: BAR 0: assigned [mem 0x1c000000-0x1c0fffff]
+[   10.791530] pci 0000:01:00.1: BAR 0: assigned [mem 0x1c100000-0x1c1fffff]
+[   10.798362] pci 0000:00:00.0: PCI bridge to [bus 01]
+[   10.803269] pci 0000:00:00.0:   bridge window [mem 0x1c000000-0x1c1fffff]
+[   10.810282] ifx_pcie_bios_map_irq port 0 dev 0000:00:00.0 slot 0 pin 1 
+[   10.816704] ifx_pcie_bios_map_irq dev 0000:00:00.0 irq 144 assigned
+[   10.822956] pcieport 0000:00:00.0: enabling device (0000 -> 0002)
+[   10.853024] Freeing unused kernel memory: 5200K
+[   10.856187] This architecture does not have kernel memory protection.
+[   10.862559] Run /init as init process
+[   11.720041] init: Console is alive
+[   11.722587] init: - watchdog -
+[   11.760542] kmodloader: loading kernel modules from /etc/modules-boot.d/*
+[   11.785548] kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+[   11.798115] init: - preinit -
+[   12.241318] random: jshn: uninitialized urandom read (4 bytes read)
+[   12.371728] random: jshn: uninitialized urandom read (4 bytes read)
+[   12.510930] random: jshn: uninitialized urandom read (4 bytes read)
+[   13.015828] gswip 1e108000.switch lan1: configuring for phy/internal link mode
+[   13.021947] 8021q: adding VLAN 0 to HW filter on device lan1
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[   15.263328] procd: - early -
+[   15.265386] procd: - watchdog -
+[   15.903952] procd: - watchdog -
+[   15.906345] procd: - ubus -
+[   15.920970] random: ubusd: uninitialized urandom read (4 bytes read)
+[   15.959659] random: ubusd: uninitialized urandom read (4 bytes read)
+[   15.965535] random: ubusd: uninitialized urandom read (4 bytes read)
+[   15.979358] procd: - init -
+Please press Enter to activate this console.
+[   16.869000] kmodloader: loading kernel modules from /etc/modules.d/*
+[   17.313140] urngd: v1.0.2 started.
+[   17.365106] IFXOS, Version 1.7.1 (c) Copyright 2009, Lantiq Deutschland GmbH
+[   17.377436] NET: Registered protocol family 8
+[   17.380343] NET: Registered protocol family 20
+[   17.395861] PPP generic driver version 2.4.2
+[   17.422987] Lantiq (VRX) DSL CPE MEI driver, version 1.5.17.6, (c) 2007-2015 Lantiq Beteiligungs-GmbH & Co. KG
+[   17.441857] 
+[   17.441857] 
+[   17.441857] Lantiq CPE API Driver version: DSL CPE API V4.17.18.6
+[   17.459544] 
+[   17.459544] Predefined debug level: 3
+[   17.464645] Get BSP Driver Handle Fail!
+[   17.468440] Get BSP Driver NFC Handle Fail!
+[   17.526567] Loading modules backported from Linux version v5.15.74-0-ga3f2f5ac9d61
+[   17.532733] Backport generated by backports.git v5.15.74-1-0-ge2d78967
+[   17.582001] NET: Registered protocol family 24
+[   17.791009] ifx_pcie_bios_map_irq port 0 dev 0000:01:00.0 slot 0 pin 1 
+[   17.796398] ifx_pcie_bios_map_irq dev 0000:01:00.0 irq 144 assigned
+[   17.802515] mt76x0e 0000:01:00.0: enabling device (0000 -> 0002)
+[   17.808920] mt76x0e 0000:01:00.0: ASIC revision: 76100002
+[   17.815348] mt76x0e 0000:01:00.0: Firmware Version: 0.1.00
+[   17.887968] random: crng init done
+[   17.889921] random: 29 urandom warning(s) missed due to ratelimiting
+[   18.064792] mt76x0e 0000:01:00.0: EEPROM ver:01 fae:00
+[   18.097137] kmodloader: done loading kernel modules from /etc/modules.d/*
+
+
+
+BusyBox v1.35.0 (2022-10-31 14:50:46 UTC) built-in shell (ash)
+
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ OpenWrt SNAPSHOT, r21149+5-b99d377886
+ -----------------------------------------------------
+=== WARNING! =====================================
+There is no root password defined on this device!
+Use the "passwd" command to set up a new password
+in order to prevent unauthorized SSH logins.
+--------------------------------------------------
+root@OpenWrt:/# 

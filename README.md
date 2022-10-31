@@ -55,7 +55,8 @@ Hit any key to stop autoboot:  0
 AR10 # 
 ```
 ## References
-[Full Bootlog](https://github.com/bengris32/Archer_D20/blob/master/logs/bootlog-stock.txt)
+[Full Bootlog (Stock)](https://github.com/bengris32/Archer_D20/blob/master/logs/bootlog-stock.txt)  
+[Full Bootlog (OpenWRT)](https://github.com/bengris32/Archer_D20/blob/master/logs/bootlog-openwrt.txt)
 
 ## OEM Support
 [Stock Firmware](https://static.tp-link.com/res/down/soft/Archer_D20_V1_150728.zip)  
